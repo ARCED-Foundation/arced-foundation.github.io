@@ -1,37 +1,328 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>ARCED's GitHub Page</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-  background-image: url('https://arced.foundation/assets/img/Cover-Design.png');
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
-}
-</style>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <!-- FontAwesome CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <!-- Animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Arced Foundation</title>
+  </head>
+  <body class="main-body">
+    <!-- Spinner Logo -->
+    <div id="spinner-container" class="spinner-container">
+      <div class="spinner">
+        <div class="spinner-inner"></div>
+      </div>
+      <img class="logo" src="./images/logo_white.png" alt="Logo" />
+    </div>
 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Logo
-  </div>
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">COMING SOON...</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">35 days left</p>
-  </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-  </div>
-</div>
+    <!-- Main Body -->
+    <section id="content" class="hidden">
+      <!-- Header Section -->
+      <header
+        class="d-flex flex-row p-3 justify-content-between align-items-center"
+      >
+        <div class="mb-2 mb-md-0">
+          <img
+            id="light-logo"
+            src="./images/foundation logo.png"
+            height="80"
+            alt="Logo"
+            loading="lazy"
+          />
+          <img
+            id="dark-logo"
+            src="./images/logo_white.png"
+            height="60"
+            alt="Logo"
+            loading="lazy"
+          />
+        </div>
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+        </div>
+      </header>
 
-</body>
+      <!-- First Section -->
+      <section class="container vh-70 text-center text-md-start py-5">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 pt-5">
+          
+            <div class="pt-4 top-banner-text">
+                <h1 class="pt-3 top-banner fs-1 fw-bold text-gradient">
+              ARCED Foundation,
+              <span class="wave" style="font-size: 56px"> 👋 </span>
+            </h1>
+            <p class="pt-4 top-banner-text">
+              <span class="highlight-text"
+                >Aureolin Research, Consultancy, and Expertise Development
+                (ARCED) Foundation</span
+              >
+              is a non-profit organization specializing in research, training,
+              and monitoring. Established in 2013, it collaborates with national
+              and international partners, earning recognition for its work.
+            </p>  
+             <p class="pt-4 top-banner-text">
+              ARCED conducts both quantitative and qualitative research,
+              including real-time data collection and socio-economic assessments.
+              It employs methodologies like RCTs, DiD, and statistical modeling
+              using tools such as SPSS and STATA. The foundation has a team of
+              in-house and external experts to ensure high-quality research and
+              analysis.
+             </p>
+            </div>
+            <div class="mt-2 pt-3">
+              <div
+                class="d-flex justify-content-center justify-content-md-start flex-wrap gap-2"
+              >
+                <a
+                  href="https://www.facebook.com/arcedfoundation"
+                  class="text-decoration-none fs-1 mx-2"
+                  aria-label="Facebook"
+                >
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a
+                  href="https://twitter.com/FoundationArced"
+                  class="text-decoration-none fs-1 mx-2"
+                  aria-label="Twitter"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="https://github.com/Arced-Foundation"
+                  class="text-decoration-none fs-1 mx-2"
+                  aria-label="GitHub"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/aarced"
+                  class="text-decoration-none fs-1 mx-2"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+            <div class="text-center pt-2 mt-2">
+              <button class="top-banner-button btn btn-primary w-100 w-md-50">
+                <a href="#footer" class="text-light text-decoration-none"
+                  >Contact me</a
+                >
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 pt-5">
+            <img
+              src="./images/output.gif"
+              class="img-fluid w-100 mx-auto d-block"
+              alt="top image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Second Section -->
+      <section class="container text-center pt-5 mt-5 text-md-start top-section">
+        <div class="row align-items-center flex-md-row flex-column-reverse">
+          <div class="col-12 col-md-6 mt-5 pt-5 image-wrapper">
+            <div class="image-container">
+              <img
+                src="./images/second.jpg"
+                class="img-fluid mx-auto d-block"
+                alt="What We Do"
+              />
+            </div>
+          </div>
+          <div class="col-12 mt-3 pt-3 col-md-6 content-wrapper">
+            <h1 class="top-banner fw-bold">What We Do</h1>
+            <p class="pt-2 top-banner-text" style="animation-delay: 0.2s;">
+              <span class="highlight-text"
+                >Aureolin Research, Consultancy, and Expertise Development
+                (ARCED) Foundation</span>wants to explore every tech stack
+            </p>
+            <div class="mt-2 social-links" style="animation-delay: 0.4s;">
+              <div class="d-flex justify-content-center flex-wrap gap-3">
+                <div class="social-icon text-center">
+                  <i class="fab fa-html5" style="font-size: 46px"></i>
+                  <p>HTML</p>
+                </div>
+                <div class="social-icon text-center">
+                  <i class="fab fa-js" style="font-size: 46px"></i>
+                  <p>JavaScript</p>
+                </div>
+                <div class="social-icon text-center">
+                  <i class="fab fa-css3" style="font-size: 46px"></i>
+                  <p>CSS3</p>
+                </div>
+                <div class="social-icon text-center">
+                  <i class="fab fa-sass" style="font-size: 46px"></i>
+                  <p>SASS</p>
+                </div>
+                <div class="social-icon text-center">
+                  <i class="fab fa-node" style="font-size: 46px"></i>
+                  <p>Node.js</p>
+                </div>
+                <div class="social-icon text-center">
+                  <i class="fab fa-python" style="font-size: 46px"></i>
+                  <p>Python</p>
+                </div>
+                <div class="social-icon text-center">
+                  <i class="fab fa-swift" style="font-size: 46px"></i>
+                  <p>Swift</p>
+                </div>
+                <div class="social-icon text-center">
+                  <i class="fab fa-docker" style="font-size: 46px"></i>
+                  <p>Docker</p>
+                </div>
+                <div class="social-icon text-center">
+                  <i class="fab fa-npm" style="font-size: 46px"></i>
+                  <p>NPM</p>
+                </div>
+                <div class="social-icon text-center">
+                  <i class="fas fa-database" style="font-size: 46px"></i>
+                  <p>Database</p>
+                </div>
+              </div>
+            </div>
+            <div class="text-start pt-4" style="animation-delay: 0.6s;">
+              <p class="top-banner-text">
+                <i class="fa-solid text-warning fa-bolt"></i> ARCED Foundation,
+                the organization focuses on implementing research projects that
+                promote collaboration, teamwork, and innovation in various
+                domains.
+              </p>
+              <p class="top-banner-text">
+                <i class="fa-solid text-warning fa-bolt"></i> They aim to support
+                researchers and institutions in generating useful insights and
+                fostering sustainable development through rigorous research
+                methodologies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Third Section -->
+      <section class="container mt-5 pt-5">
+        <h1 class="pt-5 top-banner text-center fw-bold">Our Open Source Projects</h1>
+        <div class="pt-5">
+          <div
+            id="tools-part"
+            class="tools text-center d-flex flex-wrap justify-content-center gap-3"
+          >
+            <p class="tool" data-tool="Python">Python</p>
+            <p class="tool" data-tool="Stata">Stata</p>
+            <p class="tool" data-tool="SurveyCTO">SurveyCTO</p>
+            <p class="tool" data-tool="R">R</p>
+          </div>
+        </div>
+        <div class="container mt-4 pt-4">
+          <div class="row justify-content-center" id="repo-container"></div>
+        </div>
+      </section>
+
+      <!-- Fourth Section - GitHub Stats -->
+      <section class="container mt-5 pt-5 github-stats-section">
+        <h1 class="top-banner text-center fw-bold">GitHub Stats</h1>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8">
+            <div class="github-stats-grid">
+              <!-- Most Used Languages -->
+              <div class="stats-card col-lg-4">
+                <h2>Organization's Most Used Languages</h2>
+                <div class="progress-container" id="progress-bar"></div>
+                <div class="legend" id="legend"></div>
+              </div>
+              <!-- GitHub Stats Overview -->
+              <div class="stats-card col-lg-8">
+                <h2>GitHub Stats for Organization</h2>
+                <div class="stats-container" id="stats">
+                  <!-- Stats will be dynamically inserted here -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <section id="footer">
+        <footer id="contact" class="text-center py-4">
+          <p><strong>ARCED Foundation</strong></p>
+          <p>Aureolin Research, Consultancy & Expertise Development Foundation</p>
+          <p>House 463, Flat 5A & 6A, Road 7, Avenue 5</p>
+          <p>Mirpur DOHS, Dhaka 1216, Bangladesh</p>
+          <p><a href="mailto:info@arced.foundation">info@arced.foundation</a></p>
+          <div class="d-flex justify-content-center gap-4 py-2">
+            <a
+              style="color: #facb1e; font-size: 25px"
+              href="https://www.facebook.com/arcedfoundation"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              style="color: #facb1e; font-size: 25px"
+              href="https://github.com/Arced-Foundation"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              style="color: #facb1e; font-size: 25px"
+              href="https://www.linkedin.com/company/aarced"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              style="color: #facb1e; font-size: 25px"
+              href="https://twitter.com/FoundationArced"
+              target="_blank"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <p>+880 251 051 088</p>
+        </footer>
+      </section>
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="./js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/git.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </body>
 </html>
