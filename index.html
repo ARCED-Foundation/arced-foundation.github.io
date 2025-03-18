@@ -72,29 +72,28 @@
       <section class="container vh-70 text-center text-md-start py-5">
         <div class="row align-items-center">
           <div class="col-12 col-md-6 pt-5">
-          
             <div class="pt-4 top-banner-text">
-                <h1 class="pt-3 top-banner fs-1 fw-bold text-gradient">
-              ARCED Foundation,
-              <span class="wave" style="font-size: 56px"> 👋 </span>
-            </h1>
-            <p class="pt-4 top-banner-text">
-              <span class="highlight-text"
-                >Aureolin Research, Consultancy, and Expertise Development
-                (ARCED) Foundation</span
-              >
-              is a non-profit organization specializing in research, training,
-              and monitoring. Established in 2013, it collaborates with national
-              and international partners, earning recognition for its work.
-            </p>  
-             <p class="pt-4 top-banner-text">
-              ARCED conducts both quantitative and qualitative research,
-              including real-time data collection and socio-economic assessments.
-              It employs methodologies like RCTs, DiD, and statistical modeling
-              using tools such as SPSS and STATA. The foundation has a team of
-              in-house and external experts to ensure high-quality research and
-              analysis.
-             </p>
+              <h1 class="pt-3 top-banner fs-1 fw-bold text-gradient">
+                ARCED Foundation,
+                <span class="wave" style="font-size: 56px"> 👋 </span>
+              </h1>
+              <p class="pt-4 top-banner-text">
+                <span class="highlight-text"
+                  >Aureolin Research, Consultancy, and Expertise Development
+                  (ARCED) Foundation</span
+                >
+                is a non-profit organization specializing in research, training,
+                and monitoring. Established in 2013, it collaborates with national
+                and international partners, earning recognition for its work.
+              </p>
+              <p class="pt-4 top-banner-text">
+                ARCED conducts both quantitative and qualitative research,
+                including real-time data collection and socio-economic assessments.
+                It employs methodologies like RCTs, DiD, and statistical modeling
+                using tools such as SPSS and STATA. The foundation has a team of
+                in-house and external experts to ensure high-quality research and
+                analysis.
+              </p>
             </div>
             <div class="mt-2 pt-3">
               <div
@@ -165,7 +164,9 @@
             <p class="pt-2 top-banner-text" style="animation-delay: 0.2s;">
               <span class="highlight-text"
                 >Aureolin Research, Consultancy, and Expertise Development
-                (ARCED) Foundation</span>wants to explore every tech stack
+                (ARCED) Foundation</span
+              >
+              wants to explore every tech stack
             </p>
             <div class="mt-2 social-links" style="animation-delay: 0.4s;">
               <div class="d-flex justify-content-center flex-wrap gap-3">
@@ -209,6 +210,18 @@
                   <i class="fas fa-database" style="font-size: 46px"></i>
                   <p>Database</p>
                 </div>
+                <div class="social-icon text-center">
+                  <i class="fas fa-chart-bar" style="font-size: 46px"></i>
+                  <p>Stata</p>
+                </div>
+                <div class="social-icon text-center">
+                  <i class="fab fa-python" style="font-size: 46px"></i>
+                  <p>Python</p>
+                </div>
+                <div class="social-icon text-center">
+                  <i class="fab fa-r-project" style="font-size: 46px"></i>
+                  <p>R</p>
+                </div>
               </div>
             </div>
             <div class="text-start pt-4" style="animation-delay: 0.6s;">
@@ -230,15 +243,15 @@
       </section>
 
       <!-- Third Section -->
-      <section class="container mt-5 pt-5">
+      <section class="container mt-5 pt-5 top-section">
         <h1 class="pt-5 top-banner text-center fw-bold">Our Open Source Projects</h1>
         <div class="pt-5">
           <div
             id="tools-part"
             class="tools text-center d-flex flex-wrap justify-content-center gap-3"
           >
+            <p class="tool active" data-tool="Stata">Stata</p>
             <p class="tool" data-tool="Python">Python</p>
-            <p class="tool" data-tool="Stata">Stata</p>
             <p class="tool" data-tool="SurveyCTO">SurveyCTO</p>
             <p class="tool" data-tool="R">R</p>
           </div>
@@ -249,26 +262,19 @@
       </section>
 
       <!-- Fourth Section - GitHub Stats -->
-      <section class="container mt-5 pt-5 github-stats-section">
-        <h1 class="top-banner text-center fw-bold">GitHub Stats</h1>
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8">
-            <div class="github-stats-grid">
-              <!-- Most Used Languages -->
-              <div class="stats-card col-lg-4">
-                <h2>Organization's Most Used Languages</h2>
-                <div class="progress-container" id="progress-bar"></div>
-                <div class="legend" id="legend"></div>
-              </div>
-              <!-- GitHub Stats Overview -->
-              <div class="stats-card col-lg-8">
-                <h2>GitHub Stats for Organization</h2>
-                <div class="stats-container" id="stats">
-                  <!-- Stats will be dynamically inserted here -->
-                </div>
-              </div>
-            </div>
+      <section class="container mt-5 pt-5 top-section">
+        <h1 class="pt-5 top-banner text-center fw-bold">GitHub Stats</h1>
+        <div class="pt-5">
+          <div
+            id="stats-tools"
+            class="tools text-center d-flex flex-wrap justify-content-center gap-3"
+          >
+            <p class="tool active" data-stats="languages">Most Used Languages</p>
+            <p class="tool" data-stats="github">ARCED Foundation's GitHub Stats</p>
           </div>
+        </div>
+        <div class="container mt-4 pt-4">
+          <div class="row justify-content-center" id="stats-container"></div>
         </div>
       </section>
 
@@ -279,7 +285,7 @@
           <p>Aureolin Research, Consultancy & Expertise Development Foundation</p>
           <p>House 463, Flat 5A & 6A, Road 7, Avenue 5</p>
           <p>Mirpur DOHS, Dhaka 1216, Bangladesh</p>
-          <p><a href="mailto:info@arced.foundation">info@arced.foundation</a></p>
+          <p><a href="/cdn-cgi/l/email-protection#2e474048416e4f5c4d4b4a0048415b404a4f5a474140"><span class="__cf_email__" data-cfemail="2e474048416e4f5c4d4b4a0048415b404a4f5a474140">[email protected]</span></a></p>
           <div class="d-flex justify-content-center gap-4 py-2">
             <a
               style="color: #facb1e; font-size: 25px"
@@ -316,13 +322,14 @@
     </section>
 
     <!-- JavaScript Files -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="./js/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/git.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'922249cdac29674a',t:'MTc0MjI3NTMwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
   </body>
 </html>
