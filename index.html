@@ -45,13 +45,16 @@
         class="d-flex flex-row p-3 justify-content-between align-items-center"
       >
         <div class="mb-2 mb-md-0">
-          <img
+          <a href="https://arced.foundation/">
+            <img
             id="light-logo"
             src="./images/foundation logo.png"
             height="80"
             alt="Logo"
             loading="lazy"
           />
+          </a>
+          <a href="https://arced.foundation/">
           <img
             id="dark-logo"
             src="./images/logo_white.png"
@@ -59,6 +62,7 @@
             alt="Logo"
             loading="lazy"
           />
+          </a>
         </div>
         <div class="theme-switch-wrapper">
           <label class="theme-switch" for="checkbox">
@@ -74,7 +78,7 @@
           <div class="col-12 col-md-6 pt-5">
             <div class="pt-4 top-banner-text">
               <h1 class="pt-3 top-banner fs-1 fw-bold text-gradient">
-                ARCED Foundation,
+                ARCED Foundation
                 <span class="wave" style="font-size: 56px"> 👋 </span>
               </h1>
               <p class="pt-4 top-banner-text">
@@ -127,12 +131,19 @@
                 >
                   <i class="fab fa-linkedin"></i>
                 </a>
+                <a
+                  href="https://arced.foundation/"
+                  class="text-decoration-none fs-1 mx-2"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fa-solid fa-globe"></i>
+                </a>
               </div>
             </div>
             <div class="text-center pt-2 mt-2">
-              <button class="top-banner-button btn btn-primary w-100 w-md-50">
+              <button class="top-banner-button w-100 w-md-50">
                 <a href="#footer" class="text-light text-decoration-none"
-                  >Contact me</a
+                  >Contact us</a
                 >
               </button>
             </div>
@@ -150,7 +161,7 @@
       <!-- Second Section -->
       <section class="container text-center pt-5 mt-5 text-md-start top-section">
         <div class="row align-items-center flex-md-row flex-column-reverse">
-          <div class="col-12 col-md-6 mt-5 pt-5 image-wrapper">
+          <div class="col-12 col-md-6  image-wrapper">
             <div class="image-container">
               <img
                 src="./images/second.jpg"
@@ -210,10 +221,6 @@
                   <i class="fas fa-database" style="font-size: 46px"></i>
                   <p>Database</p>
                 </div>
-              <!---  <div class="social-icon text-center">
-                  <i class="fas fa-chart-bar" style="font-size: 46px"></i>
-                  <p>Stata</p>
-                </div> --->
                 <div class="social-icon text-center">
                   <i class="fab fa-python" style="font-size: 46px"></i>
                   <p>Python</p>
@@ -224,7 +231,10 @@
                 </div>
               </div>
             </div>
-            <div class="text-start pt-4" style="animation-delay: 0.6s;">
+           
+          </div>
+
+           <div class="text-start pt-4" style="animation-delay: 0.6s;">
               <p class="top-banner-text">
                 <i class="fa-solid text-warning fa-bolt"></i> ARCED Foundation,
                 the organization focuses on implementing research projects that
@@ -238,7 +248,6 @@
                 methodologies.
               </p>
             </div>
-          </div>
         </div>
       </section>
 
@@ -264,17 +273,43 @@
       <!-- Fourth Section - GitHub Stats -->
       <section class="container mt-5 pt-5 top-section">
         <h1 class="pt-5 top-banner text-center fw-bold">GitHub Stats</h1>
-        <div class="pt-5">
-          <div
-            id="stats-tools"
-            class="tools text-center d-flex flex-wrap justify-content-center gap-3"
-          >
-            <p class="tool active" data-stats="languages">Most Used Languages</p>
-            <p class="tool" data-stats="github">ARCED Foundation's GitHub Stats</p>
+        <div class="stats-container mt-4 pt-4 d-flex flex-wrap justify-content-center gap-4">
+          <!-- Most Used Languages Card -->
+          <div class="card p-4 illusion-card" style="max-width: 350px;">
+            <div class="card-body">
+              <h2 class="card-title f-2">Most Used Languages</h2>
+              <p class="card-text">Breakdown of programming languages used across ARCED Foundation repositories.</p>
+              <div class="language-bar">
+                <div style="background-color: #ff6f61; width: 47.92%;"></div>
+                <div style="background-color: #4db6ac; width: 27.23%;"></div>
+                <div style="background-color: #ffd54f; width: 12.55%;"></div>
+                <div style="background-color: #ab47bc; width: 5.46%;"></div>
+                <div style="background-color: #66bb6a; width: 4.83%;"></div>
+                <div style="background-color: #ef5350; width: 1.80%;"></div>
+              </div>
+              <div class="language-legend">
+                <span><span class="dot" style="background-color: #ff6f61;"></span> Stata 47.92%</span>
+                <span><span class="dot" style="background-color: #4db6ac;"></span> R 27.23%</span>
+                <span><span class="dot" style="background-color: #ffd54f;"></span> JavaScript 12.55%</span>
+                <span><span class="dot" style="background-color: #ab47bc;"></span> CSS 5.46%</span>
+                <span><span class="dot" style="background-color: #66bb6a;"></span> HTML 4.83%</span>
+                <span><span class="dot" style="background-color: #ef5350;"></span> Python 1.80%</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="container mt-4 pt-4">
-          <div class="row justify-content-center" id="stats-container"></div>
+
+          <!-- GitHub Stats Card -->
+          <div class="card p-4 illusion-card" style="max-width: 350px;">
+            <div class="card-body">
+              <h2 class="card-title f-2">ARCED Foundation's GitHub Stats</h2>
+              <p class="card-text">Key statistics from ARCED Foundation’s GitHub activity in 2025.</p>
+              <div class="stats">
+                <div class="row"><i class="fas fa-star" style="color: #ffca28;"></i> Total Stars Earned: 12</div>
+                <div class="row"><i class="fas fa-code-commit" style="color: #42a5f5;"></i> Total Commits (2025): 237</div>
+                <div class="row"><i class="fas fa-exclamation-circle" style="color: #ef5350;"></i> Total Issues: 5</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -285,8 +320,7 @@
           <p>Aureolin Research, Consultancy & Expertise Development Foundation</p>
           <p>House 463, Flat 5A & 6A, Road 7, Avenue 5</p>
           <p>Mirpur DOHS, Dhaka 1216, Bangladesh</p>
-          <p>info@arced.foundation</p>
-          <div class="d-flex justify-content-center gap-4 py-2">
+           <div class="d-flex justify-content-center gap-4 py-2">
             <a
               style="color: #facb1e; font-size: 25px"
               href="https://www.facebook.com/arcedfoundation"
@@ -310,6 +344,13 @@
             </a>
             <a
               style="color: #facb1e; font-size: 25px"
+              href="https://arced.foundation/"
+              target="_blank"
+            >
+              <i class="fa-solid fa-globe"></i>
+            </a>
+            <a
+              style="color: #facb1e; font-size: 25px"
               href="https://twitter.com/FoundationArced"
               target="_blank"
             >
@@ -322,14 +363,6 @@
     </section>
 
     <!-- JavaScript Files -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="./js/script.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'922249cdac29674a',t:'MTc0MjI3NTMwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
-  </body>
-</html>
+    html>

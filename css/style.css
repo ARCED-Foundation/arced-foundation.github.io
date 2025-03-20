@@ -18,6 +18,11 @@
     #fd9179 52.55%,
     #ff6969 89.95%
   );
+  --header: linear-gradient(
+    94.23deg,
+    #fd9179 52.55%,
+    #ff6969 89.95%
+  );
 }
 
 body {
@@ -45,8 +50,8 @@ body {
 }
 
 .spinner {
-  width: clamp(80px, 15vw, 100px);
-  height: clamp(80px, 15vw, 100px);
+  width: clamp(60px, 15vw, 100px);
+  height: clamp(60px, 15vw, 100px);
   border-radius: 50%;
   background: conic-gradient(
     rgba(255, 0, 0, 1),
@@ -66,8 +71,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: clamp(60px, 12vw, 80px);
-  height: clamp(60px, 12vw, 80px);
+  width: clamp(40px, 12vw, 80px);
+  height: clamp(40px, 12vw, 80px);
   background-color: #000000;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -78,7 +83,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: clamp(40px, 8vw, 50px);
+  width: clamp(30px, 8vw, 50px);
   height: auto;
   z-index: 2;
 }
@@ -103,6 +108,7 @@ body {
 /************************ Header *********************************/
 header {
   padding: 1rem 2rem;
+  flex-wrap: wrap;
 }
 
 header img {
@@ -217,7 +223,7 @@ input:checked + .slider:before {
   background: var(--emo);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 50px !important;
+  font-size: clamp(2rem, 5vw, 3.125rem) !important;
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
@@ -230,10 +236,9 @@ input:checked + .slider:before {
 
 .top-banner-text {
   text-align: left;
-  font-size: clamp(24px, 2.5vw, 1.3125rem);
+  font-size: clamp(1rem, 2.5vw, 1.3125rem);
   line-height: 1.6;
   background: rgba(255, 255, 255, 0.8);
-  padding: 15px;
   transition: transform 0.3s ease;
 }
 
@@ -242,10 +247,10 @@ input:checked + .slider:before {
 }
 
 .highlight-text {
-  color: #55198b;
+  background: var(--header);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 700;
-  padding: 0 5px;
-  background: rgba(85, 25, 139, 0.1);
 }
 
 .social-links .social-icon {
@@ -254,7 +259,7 @@ input:checked + .slider:before {
   transition: all 0.3s ease;
   padding: 10px;
   background: rgba(255, 255, 255, 0.9);
-  min-width: 80px;
+  min-width: clamp(60px, 10vw, 80px);
 }
 
 .social-links .social-icon:hover {
@@ -286,7 +291,7 @@ section:nth-child(2) .social-links .social-icon:hover {
 
 .image-container {
   position: relative;
-  padding: 20px;
+  padding: clamp(10px, 2vw, 20px);
   background: rgba(255, 255, 255, 0.9);
   transform: perspective(1000px) rotateY(5deg);
   transition: transform 0.3s ease;
@@ -298,6 +303,8 @@ section:nth-child(2) .social-links .social-icon:hover {
 
 .image-container img {
   border: none;
+  width: 100%;
+  height: auto;
 }
 
 [data-theme="dark"] .top-section {
@@ -321,11 +328,11 @@ section:nth-child(2) .social-links .social-icon:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
+  margin: clamp(5px, 1vw, 10px);
 }
 
 .social-icon p {
-  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  font-size: clamp(0.75rem, 2vw, 1.125rem);
   line-height: 1.6;
   margin-top: 5px;
 }
@@ -333,30 +340,48 @@ section:nth-child(2) .social-links .social-icon:hover {
 /***************************** Repository & GitHub Stats **************************/
 .tools {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 90%;
+  padding: 0 1rem;
 }
 
 .tools .tool {
-  padding: 15px 25px;
-  font-size: clamp(1rem, 2.5vw, 1.3125rem);
+  padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 25px);
+  font-size: clamp(0.875rem, 2.5vw, 1.3125rem);
   color: #000;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
   cursor: pointer;
   font-weight: bold;
 }
 
 .tools .tool.active {
   background-color: #55198b;
-  color: #fff;
+  color: white !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .tools .tool:hover {
   transform: translateY(-10px);
+  color: white !important;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: #55198b;
+}
+
+[data-theme="dark"] .tools .tool {
+  background-color: #333;
+  color: #fff;
+}
+
+[data-theme="dark"] .tools .tool.active {
+  background-color: #55198b !important;
+  color: #fff;
+}
+
+[data-theme="dark"] .tools .tool:hover {
+  color: white !important;
+  background-color: #55198b !important;
 }
 
 .card {
@@ -365,21 +390,21 @@ section:nth-child(2) .social-links .social-icon:hover {
   border-radius: 15px;
   color: #586069;
   cursor: pointer;
-  padding: 2rem;
+  padding: clamp(1rem, 2vw, 2rem);
   transition: all 0.3s ease;
   width: 100%;
-  max-width: 350px;
-  min-height: 300px;
+  max-width: clamp(300px, 40vw, 400px);
+  min-height: clamp(250px, 35vw, 300px);
 }
 
 .card-text {
-  font-size: clamp(16px, 2vw, 1rem);
+  font-size: clamp(0.875rem, 2vw, 1rem);
   line-height: 1.6;
   color: #586069;
 }
 
 .card-title {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
   font-weight: 800;
   margin-bottom: 15px;
   background: var(--emo);
@@ -395,16 +420,6 @@ section:nth-child(2) .social-links .social-icon:hover {
   background-color: #f0f0f0;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
-}
-
-[data-theme="dark"] .tools .tool {
-  background-color: #333;
-  color: #fff;
-}
-
-[data-theme="dark"] .tools .tool.active {
-  background-color: #55198b;
-  color: #fff;
 }
 
 [data-theme="dark"] .card {
@@ -437,8 +452,8 @@ section:nth-child(2) .social-links .social-icon:hover {
 .language-legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  font-size: clamp(14px, 1.5vw, 16px);
+  gap: clamp(8px, 1vw, 12px);
+  font-size: clamp(12px, 1.5vw, 16px);
 }
 
 .language-legend span {
@@ -448,8 +463,8 @@ section:nth-child(2) .social-links .social-icon:hover {
 }
 
 .language-legend .dot {
-  width: 12px;
-  height: 12px;
+  width: clamp(8px, 1vw, 12px);
+  height: clamp(8px, 1vw, 12px);
   border-radius: 50%;
   display: inline-block;
 }
@@ -463,46 +478,54 @@ section:nth-child(2) .social-links .social-icon:hover {
 .stats .row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: clamp(16px, 1.8vw, 18px);
+  gap: clamp(8px, 1vw, 12px);
+  font-size: clamp(14px, 1.8vw, 18px);
 }
 
 .stats .row i {
-  width: 20px;
-  height: 20px;
+  width: clamp(16px, 2vw, 20px);
+  height: clamp(16px, 2vw, 20px);
 }
 
 /************************* Footer **********************/
 footer {
-  padding: 20px;
+  padding: clamp(15px, 2vw, 20px);
   color: white;
   background-color: #000000;
 }
 
 footer p {
-  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  font-size: clamp(0.75rem, 2vw, 1.125rem);
   line-height: 1.6;
   margin-bottom: 0.5rem;
 }
 
 /****************** Responsive Design ******************/
+/* Extra Small Devices (up to 576px) */
 @media (max-width: 576px) {
   header {
     flex-direction: column;
     padding: 1rem;
+    align-items: center;
+  }
+
+  .theme-switch-wrapper {
+    margin-top: 1rem;
   }
 
   .top-banner {
-    font-size: 35px;
+    font-size: clamp(1.5rem, 5vw, 2rem) !important;
+    text-align: center;
   }
 
   .top-banner-text {
-    font-size: 16px;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    text-align: center;
   }
 
   .top-banner-button {
     width: 100%;
-    margin-right: 0;
+    margin: 1rem 0;
   }
 
   .image-container {
@@ -510,87 +533,140 @@ footer p {
     padding: 10px;
   }
 
+  .social-links {
+    justify-content: center !important;
+  }
+
   .social-links .social-icon {
     padding: 5px;
-    min-width: 60px;
+    min-width: 50px;
+  }
+
+  .social-icon i {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .tools .tool {
+    padding: 8px 12px;
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
   }
 
   .card {
     max-width: 100%;
-    min-height: 280px;
+    min-height: 200px;
+    padding: 1rem;
   }
 
   .card-title {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
   }
 
   .language-legend span {
-    font-size: 12px;
+    font-size: clamp(10px, 1.5vw, 12px);
   }
 
   .stats .row {
-    font-size: 14px;
+    font-size: clamp(12px, 1.8vw, 14px);
   }
 
   .stats .row i {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
   }
 
-  .tools .tool {
-    padding: 10px 15px;
-    font-size: 1rem;
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
+/* Small Devices (577px - 768px) */
 @media (min-width: 577px) and (max-width: 768px) {
   header {
     padding: 1.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .top-banner {
+    font-size: clamp(1.75rem, 5vw, 2.5rem) !important;
+  }
+
+  .top-banner-text {
+    font-size: clamp(0.9rem, 2.5vw, 1.125rem);
   }
 
   .top-banner-button {
-    width: 75%;
-    margin: 20px auto 0;
+    width: 80%;
+    margin: 1rem auto;
+    display: block;
   }
 
   .image-container {
     padding: 15px;
   }
 
-  .card {
-    max-width: 350px;
-    min-height: 300px;
+  .social-links .social-icon {
+    min-width: 60px;
   }
 
-  .social-links .social-icon {
-    min-width: 70px;
+  .tools .tool {
+    padding: 10px 15px;
+    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+  }
+
+  .card {
+    max-width: 90%;
+    min-height: 250px;
   }
 }
 
+/* Medium Devices (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   header {
     padding: 2rem;
   }
 
-  .card {
-    max-width: 370px;
-    min-height: 300px;
+  .top-banner {
+    font-size: clamp(2rem, 5vw, 2.75rem) !important;
+  }
+
+  .top-banner-text {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+  }
+
+  .top-banner-button {
+    width: 60%;
   }
 
   .social-links .social-icon {
-    min-width: 80px;
+    min-width: 70px;
+  }
+
+  .tools .tool {
+    padding: 12px 20px;
+  }
+
+  .card {
+    max-width: 350px;
+    min-height: 280px;
   }
 }
 
+/* Large Devices (1025px and up) */
 @media (min-width: 1025px) {
+  .top-banner-button {
+    width: 50%;
+  }
+
   .card {
     max-width: 400px;
     min-height: 300px;
   }
 }
 
+/* Ensure Bootstrap button styles are consistent */
 .btn {
-  background-color: #4caf50;
   border: none;
   color: white;
   padding: 15px 32px;
